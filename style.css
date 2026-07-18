@@ -28,20 +28,28 @@ body{
    CONTAINER
 =========================== */
 
-.container{
-    width: 100%;
-    min-height: 100vh;
+.container {
+    width: 100vw; /* Faz o container ocupar 100% da largura visível da tela */
+    min-height: 100vh; /* Faz ele cobrir a altura total da tela, se necessário */
+    margin: 0; /* Remove margens laterais que centralizavam a caixa */
+    padding: 60px 20px; /* Dá um espaçamento confortável nas bordas superiores e laterais */
+    text-align: center;
+    box-sizing: border-box;
+    
+    /* Removemos o border-radius para não arredondar as pontas na tela cheia */
+    border-radius: 0; 
 
+    /* Camada escura de ponta a ponta */
+    background-color: rgba(0, 0, 0, 0.7); 
+    
+    /* Efeito de desfoque no fundo do tigre e dragão */
+    backdrop-filter: blur(5px); 
+    
+    /* Centraliza os elementos verticalmente na tela caso queira */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    text-align: center;
-
-    padding: 40px;
-
-    background: rgba(0,0,0,.45);
 }
 
 /* ===========================
